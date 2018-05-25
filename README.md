@@ -8,3 +8,5 @@ handlingFiles
 </div>
 
 [![Alt text for your video](https://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](http://www.youtube.com/watch?v=T-D1KVIuvjA)
+
+[![Demo CountPages alpha](https://github.com/valestro/Python/blob/master/howToGetYTCCxml.gif?raw=true)](https://www.youtube.com/watch?v=r3nK-y1_5rI&feature=youtu.be)
