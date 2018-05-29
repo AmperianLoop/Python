@@ -1,4 +1,5 @@
 <hr>
+
 <h1>ytCCRemovingTags</h1>
 <p>The Python script ytCCRemovingTags.py takes a file with tags and removes them all. Further editing is usually required since the auto generated sub titles do not have many punctuations.</p>
 
@@ -15,7 +16,5 @@
 <h1>Obtain YouTube's auto generated sub titles automatically using youtube-dl</h1>
 
 <pre>youtube-dl --write-sub --write-auto-sub --sub-format "ttml" --sub-lang es --skip-download https://www.youtube.com/watch?v=fkPjFfhigcA</pre>
-
-To use the Python sni
 
 <hr>
