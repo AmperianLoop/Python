@@ -1,5 +1,6 @@
 <hr>
-<h1>Manually obtain YouTube's auto generated sub titles.</h1>
+<h1>ytCCRemovingTags</h1>
+<h2>Manually obtain YouTube's auto generated sub titles.</h2>
 
 1. Open the Network tab by right clicking on the page and selecting inspect element, a new window should pop up. click on the Network tab.
 
