@@ -13,7 +13,7 @@
 
 [![How to Get YT Auto GeneratedCC](https://github.com/valestro/Python/blob/master/PythonAllImagesGH/howToGetYTCCxml.gif?raw=true)](https://www.youtube.com/watch?v=r3nK-y1_5rI&feature=youtu.be)
 
-<h1>Obtain YouTube's auto generated sub titles automatically using youtube-dl</h1>
+<h2>Obtain YouTube's auto generated sub titles automatically using youtube-dl</h2>
 
 <pre>youtube-dl --write-sub --write-auto-sub --sub-format "ttml" --sub-lang es --skip-download https://www.youtube.com/watch?v=fkPjFfhigcA</pre>
 
