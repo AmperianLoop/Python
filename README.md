@@ -92,33 +92,26 @@ desktop = os.path.join(home, 'Desktop')     # Note: Linux may not have a desktop
 os.chdir(desktop)                           # The below folder should also be located at the desktop
 autoDjangoDep = os.path.join(desktop, 'autoDjangoDep')  # Desktop/autoDjangoDep/
 
-# https://stackoverflow.com/questions/24520329/python-reference-a-file-in-the-same-directory-as-the-running-file?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-# autoDjangoDep = os.path.join(os.path.dirname(__file__),"autoDjangoDep")
 
-# Variables used below
-# WebsiteName = ''                          # WebsiteName/
-# Home_App_Name = ''                        # WebsiteName/Home_App_Name/
-# home_app_path = ''                        # Desktop/WebsiteName/Home_App_Name/
-
-# Get user input for the name of the Django project, e.i. VCWeb.
+Get user input for the name of the Django project, e.i. VCWeb.
 WebsiteName = input('Enter your website Main folder name (which is also the main sub-folder hub name): ')
 
-# Creating the Django Project
+Creating the Django Project
 os.system(r'django-admin startproject ' + WebsiteName)      # This is like typing in the terminal
 time.sleep(2)                                               # Give time to create the django project folders.
 os.chdir(WebsiteName)                                       # Desktop/WebsiteName
 
-# Get user input for the name of the Home App, e.i. VApp.
+Get user input for the name of the Home App, e.i. VApp.
 Home_App_Name = input('Enter your homepage apps name: ')
 
-# Creating the Home App inside Desktop/WebsiteName/
+Creating the Home App inside Desktop/WebsiteName/
 os.system(r'python manage.py startapp ' + Home_App_Name)    # Makes the folders for your Home_App_Name.
 time.sleep(1)  # In case cpu is slow.
 
-# Desktop/WebsiteName/Home_App_Name/
+Desktop/WebsiteName/Home_App_Name/
 home_app_path = os.path.join(desktop, WebsiteName, Home_App_Name)  # Used later as dst3.
 
-# Install Home_App_Name, rest_framework , and declare MEDIA_URL by reading and writing to the settings.py file.
+Install Home_App_Name, rest_framework , and declare MEDIA_URL by reading and writing to the settings.py file.
 settings_dot_py = os.path.join(desktop, WebsiteName, WebsiteName, r'settings.py')  # Not sure I need the raw string.
 with open(settings_dot_py, 'r') as f:
     contents = f.readlines()
@@ -134,9 +127,9 @@ with open(settings_dot_py, 'r') as f:
         f2.write(contents)
 
 
-# Copying the files from autoDjangoDep folder located on desktop.
-# Defining variables of the file paths as sources and destinations to make a source to destination=src_dst dictionary.
-# Then will loop through the keys and values of this dictionary to copy the files with the copyfile() function.
+Copying the files from autoDjangoDep folder located on desktop.
+Defining variables of the file paths as sources and destinations to make a source to destination=src_dst dictionary.
+Then will loop through the keys and values of this dictionary to copy the files with the copyfile() function.
 src3 = os.path.join(autoDjangoDep, 'models.py')  # autoDjangoDep/models.py
 dst3 = os.path.join(home_app_path, 'models.py')  # WebsiteName/Home_App_Name/models.py
 src6 = os.path.join(autoDjangoDep, 'urlsSuper.py')
@@ -160,7 +153,7 @@ src_dst = {src3: dst3,
            src10: dst10,
            src11: dst11}
 
-# Looping through the keys and values of of src_dst to copy the files with the copyfile() function. Also Replace holder.
+Looping through the keys and values of of src_dst to copy the files with the copyfile() function. Also Replace holder.
 for s, d in src_dst.items():
     copyfile(s, d)
 
@@ -173,7 +166,7 @@ for s, d in src_dst.items():
             f2.write(c2)
 
 
-# Copying folders
+Copying folders
 src4 = os.path.join(autoDjangoDep, 'static')
 dst4 = os.path.join(home_app_path, 'static')
 src5 = os.path.join(autoDjangoDep, 'templates')  # Here are all the html files.
@@ -185,12 +178,12 @@ copytree(src4, dst4)
 copytree(src5, dst5)
 copytree(src13, dst13)
 
-#  Changing dirs
+Changing dirs
 os.chdir(home_app_path)                 # WebsiteName/Home_App_Name/
 os.chdir('templates')                   # WebsiteName/Home_App_Name/templates/
 os.chdir(Home_App_Name)                 # WebsiteName/Home_App_Name/templates/Home_App_Name/
 
-# Need to check if a folder. For now make sure no folder in dst5. Should not be any I think, Django convention.
+Need to check if a folder. For now make sure no folder in dst5. Should not be any I think, Django convention.
 for filename in os.listdir(dst5):       # dst5 = WebsiteName/Home_App_Name/templates/Home_App_Name/
 
     with open(filename, 'r')as f:  # f = file, c = contents
@@ -199,7 +192,8 @@ for filename in os.listdir(dst5):       # dst5 = WebsiteName/Home_App_Name/templ
         with open(filename, 'w')as f2:
             c = ''.join(c)
             c2 = c.replace("*Home_App_Name*", Home_App_Name)
-            f2.write(c2)</pre>
+            f2.write(c2)
+</pre>
 <hr>
 
 
