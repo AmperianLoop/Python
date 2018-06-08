@@ -18,7 +18,7 @@
 <pre>youtube-dl --write-sub --write-auto-sub --sub-format "ttml" --sub-lang es --skip-download https://www.youtube.com/watch?v=fkPjFfhigcA</pre>
 
 <hr>
-STEPS FOR CREATING A DJANGO PROJECT
+<h1>STEPS FOR CREATING A DJANGO PROJECT</h1>
 <p>1. Create the main folder and sub-folder by running the command</p>
 <pre class="prettyprint lang-py prettyprinted" style="line-height: 1.42857;"><span class="pln">django</span><span class="pun">-</span><span class="pln">admin startproject </span><span class="typ">WebsiteName</span></pre><p><i style="color: rgba(0, 133, 255, 0.89);">In autoDjango.py</i>
 </p>
@@ -194,8 +194,12 @@ for filename in os.listdir(dst5):       # dst5 = WebsiteName/Home_App_Name/templ
             c2 = c.replace("*Home_App_Name*", Home_App_Name)
             f2.write(c2)
 </pre>
+
+[![Auto Django](https://github.com/valestro/Python/blob/master/PythonAllImagesGH/autoDjango.gif?raw=true)](https://www.youtube.com/watch?v=5zTA4A0f65Y&feature=youtu.be)
+
 <hr>
 
 
 <hr>
+
 <hr>
