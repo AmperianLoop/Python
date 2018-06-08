@@ -79,6 +79,9 @@ settings_dot_py </span><span class="pun">=</span><span class="pln"> os</span><sp
 <pre class="prettyprint lang-py prettyprinted" id="speakMess318" style="line-height: 1.42857; font-weight: bold;"><span class="com">python manage.py createsuperuser</span></pre><p><i>
 </i></p>
 <p><i>6. </i>Should all be working now.</p>
+
+[![Auto Django](https://github.com/valestro/Python/blob/master/PythonAllImagesGH/autoDjango.gif?raw=true)](https://www.youtube.com/watch?v=5zTA4A0f65Y&feature=youtu.be)
+
 <pre># Automates the starting process of creating a project with Django, need a desktop and a folder named autoDjangoDep.
 import os                                   # Navigate the file system.
 from os.path import expanduser              # For cross operating system compatibility.
@@ -195,11 +198,6 @@ for filename in os.listdir(dst5):       # dst5 = WebsiteName/Home_App_Name/templ
             f2.write(c2)
 </pre>
 
-[![Auto Django](https://github.com/valestro/Python/blob/master/PythonAllImagesGH/autoDjango.gif?raw=true)](https://www.youtube.com/watch?v=5zTA4A0f65Y&feature=youtu.be)
 
-<hr>
-
-
-<hr>
 
 <hr>
